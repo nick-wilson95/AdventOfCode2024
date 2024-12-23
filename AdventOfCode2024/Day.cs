@@ -10,7 +10,7 @@ public interface IDay<T> where T : IDay<T>
 
     private static readonly ImmutableArray<string> Input = [.. File.ReadAllLines($"Input/day{T.DayNumber}.txt")];
 
-    static Solution Solve() => new(T.SolvePart1(IDay<T>.Input), T.SolvePart2(IDay<T>.Input));
+    static Solution Solve() => new(T.SolvePart1(Input), T.SolvePart2(Input));
 }
 
 public abstract record Day<T> where T : IDay<T>
